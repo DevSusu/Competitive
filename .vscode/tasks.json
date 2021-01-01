@@ -1,0 +1,74 @@
+{
+    // https://code.visualstudio.com/docs/editor/tasks
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "C/C++: g++ build active file",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}.out"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Build active cpp file."
+        },
+        {
+            "type": "shell",
+            "label": "C/C++: build and execute (standard)",
+            "command": "${fileDirname}/${fileBasenameNoExtension}.out",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": "test",
+            "detail": "execute binary with standard i/o.",
+            "dependsOn": [
+                "C/C++: g++ build active file"
+            ]
+        },
+        {
+            "type": "shell",
+            "label": "C/C++: build and execute (file)",
+            "command": "${fileDirname}/${fileBasenameNoExtension}.out < ${fileDirname}/input.txt > ${fileDirname}/output.txt",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": "test",
+            "detail": "execute binary with file i/o.",
+            "presentation": {
+                "reveal": "never"
+            },
+            "dependsOn": [
+                "C/C++: g++ build active file"
+            ]
+        },
+        {
+            "type": "shell",
+            "label": "C/C++: generate input.txt",
+            "command": "${fileDirname}/${fileBasenameNoExtension}.out > ${fileDirname}/input.txt",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": "test",
+            "detail": "execute to generate input.txt",
+            "presentation": {
+                "reveal": "never"
+            },
+            "dependsOn": [
+                "C/C++: g++ build active file"
+            ]
+        },
+    ],
+    "version": "2.0.0",
+    "runner": "terminal",
+}

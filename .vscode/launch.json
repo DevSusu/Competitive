@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug with lldb (standard input)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}.out",
+            "cwd": "${workspaceFolder}",
+            "MIMode": "lldb",
+        },
+        {
+            "name": "Debug with lldb (file input)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}.out",
+            "cwd": "${workspaceFolder}",
+            "MIMode": "lldb",
+            "setupCommands": [
+                {
+                    "text": "settings set target.input-path ${fileDirname}/input.txt"
+                }
+            ]
+        }
+    ]
+}
