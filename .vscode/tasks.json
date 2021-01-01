@@ -2,7 +2,7 @@
     // https://code.visualstudio.com/docs/editor/tasks
     "tasks": [
         {
-            "type": "shell",
+            "type": "cppbuild",
             "label": "C/C++: g++ build active file",
             "command": "/usr/bin/g++",
             "args": [
@@ -17,11 +17,8 @@
             "problemMatcher": [
                 "$gcc"
             ],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-            "detail": "Build active cpp file."
+            "detail": "Build active cpp file.",
+            "group": "build"
         },
         {
             "type": "shell",
