@@ -1,8 +1,8 @@
 ### Custom ###
 *.dSYM
-.cph
 input.txt
 output.txt
+*.bin
 
 ### C++ ###
 # Prerequisites
