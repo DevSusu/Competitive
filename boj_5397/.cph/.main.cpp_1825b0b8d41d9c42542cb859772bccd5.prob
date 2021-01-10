@@ -1,0 +1,1 @@
+{"name":"Local: main","url":"/Users/susu/Workspace/algorithm/cpp/boj_5397/main.cpp","tests":[{"id":1610211562669,"input":"2\n<<BP<A>>Cd-\nThIsIsS3Cr3t","output":"BAPC\nThIsIsS3Cr3t"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/susu/Workspace/algorithm/cpp/boj_5397/main.cpp","group":"local","local":true}
